@@ -6,7 +6,8 @@ const Layout = () => {
   return (
     <>
       <NavBar />
-      <main className="prose p-5">
+      {/* prose ? this utility class cause our page to not take the whole width */}
+      <main className="prose p-5 w-full">
         <Outlet />
         <Toaster />
       </main>

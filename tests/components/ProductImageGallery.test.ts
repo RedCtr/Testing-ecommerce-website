@@ -1,0 +1,4 @@
+
+describe('Test ProductImageGallery Component', () => {
+
+})

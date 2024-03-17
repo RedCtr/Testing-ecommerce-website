@@ -10,6 +10,9 @@ import AdminLayout from "./pages/admin/AdminLayout.tsx";
 import EditProductPage from "./pages/admin/EditProductPage.tsx";
 import NewProductPage from "./pages/admin/NewProductPage.tsx";
 import AdminProductListPage from "./pages/admin/ProductListPage.tsx";
+import ProblemLayout from "./pages/problems/ProblemLayout.tsx";
+import ProblemList from "./pages/problems/ProblemList.tsx";
+import ProblemPage from "./pages/problems/ProblemPage.tsx";
 
 const routes: RouteObject[] = [
   {
@@ -32,7 +35,15 @@ const routes: RouteObject[] = [
         ],
       },
     ],
-  },
+    },
+    {
+      path: "problems",
+      element: <ProblemLayout />,
+      children: [
+        { index: true, element: <ProblemList /> },
+        { path: ":id", element: <ProblemPage /> },
+      ],
+    }
 ];
 
 export default routes;
