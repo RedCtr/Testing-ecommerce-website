@@ -38,8 +38,8 @@ const ProblemList = () => {
               {problem.description}
             </p>
             <p
-              className={`my-1 bg-slate-800 rounded-sm px-[2px] capitalize ${
-                problem.isSolved ? "text-green-400" : "text-rose-500"
+              className={`my-1 text-slate-800 rounded-sm px-[2px] capitalize ${
+                problem.isSolved ? "bg-green-400" : "bg-rose-500"
               }`}
             >
               {problem.isSolved ? "Solved" : "UnSolved"}
